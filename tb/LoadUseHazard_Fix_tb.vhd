@@ -1,0 +1,53 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+
+entity LoadUseHazard_Fix_tb is
+end LoadUseHazard_Fix_tb;
+
+architecture testbench of LoadUseHazard_Fix_tb is
+signal greset_tb,gclock_tb:std_logic;
+signal instruction_tb:std_logic_vector(31 downto 0);
+signal count_tb:std_logic_vector(1 downto 0);
+signal new_instruction_tb:std_logic;
+
+	component LoadUseHazard_Fix is
+		port(greset,gclock:in std_logic;
+			  instruction:in std_logic_vector(31 downto 0);
+			  count:out std_logic_vector(1 downto 0);
+			  new_instruction:out std_logic);
+	end component;
+
+begin
+	dut:LoadUseHazard_Fix
+		port map(greset=>greset_tb,
+					gclock=>gclock_tb,
+					instruction=>instruction_tb,
+					count=>count_tb,
+					new_instruction=>new_instruction_tb);
+	
+		clock_process:process
+	begin
+		gclock_tb<='1';
+		wait for 1ns;
+		gclock_tb<='0';
+		wait for 1ns;
+	end process;
+	
+	stim:process
+	begin
+		greset_tb<='0','1' after 2ns;
+		instruction_tb<=x"0000AAAA";
+		wait for 2ns;
+		instruction_tb<=x"0010AAAA";
+		wait for 2ns;
+		instruction_tb<=x"0FB0AAAA";
+		wait for 2ns;		
+		instruction_tb<=x"0FB0AAAA";
+		wait for 2ns;	
+		instruction_tb<=x"0FBEEEEE";
+		wait for 2ns;	
+		wait;
+	end process;
+
+end testbench;

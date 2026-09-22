@@ -1,0 +1,47 @@
+LIBRARY lpm,IEEE;
+use IEEE.std_logic_1164.all;
+USE lpm.lpm_components.all;
+
+entity DM_RAM_tb is
+end DM_RAM_tb;
+
+architecture testbench of DM_RAM_tb is
+signal gclock_tb:std_logic;
+signal MemWrite_tb,MemRead_tb: std_logic;
+signal address_tb,write_data_tb:std_logic_vector(7 downto 0);
+signal read_data_tb:std_logic_vector(7 downto 0);
+
+component DM_RAM is
+port(gclock:in std_logic;
+     MemWrite,MemRead:in std_logic;
+	  address,write_data:in std_logic_vector(7 downto 0);
+	  read_data:out std_logic_vector(7 downto 0));
+end component;
+
+begin
+
+	dut:DM_RAM
+		port map(gclock=>gclock_tb,
+		         MemWrite=>MemWrite_tb,
+					MemRead=>MemRead_tb,
+					address=>address_tb,
+					write_data=>write_data_tb,
+					read_data=>read_data_tb);
+	
+	clock_process:process
+	begin
+		gclock_tb<='1';
+		wait for 1ns;
+		gclock_tb<='0';
+		wait for 1ns;
+	end process;
+	
+	stim:process
+	begin
+		address_tb<=X"00";
+		MemRead_tb<='1';
+		MemWrite_tb<='0';
+		wait for 2ns;
+		wait;
+	end process;
+end testbench;

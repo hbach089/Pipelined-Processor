@@ -1,0 +1,313 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "MuxOut[0]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxOut[1]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxOut[2]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxOut[3]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxOut[4]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxOut[5]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxOut[6]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxOut[7]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxOut[8]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxOut[9]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxOut[10]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxOut[11]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxOut[12]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxOut[13]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxOut[14]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxOut[15]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxOut[16]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxOut[17]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxOut[18]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxOut[19]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxOut[20]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxOut[21]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxOut[22]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxOut[23]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxOut[24]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxOut[25]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxOut[26]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxOut[27]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxOut[28]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxOut[29]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxOut[30]",
+					"strict" : false
+				},
+				{
+					"name" : "MuxOut[31]",
+					"strict" : false
+				},
+				{
+					"name" : "InstructionOut[0]",
+					"strict" : false
+				},
+				{
+					"name" : "InstructionOut[1]",
+					"strict" : false
+				},
+				{
+					"name" : "InstructionOut[2]",
+					"strict" : false
+				},
+				{
+					"name" : "InstructionOut[3]",
+					"strict" : false
+				},
+				{
+					"name" : "InstructionOut[4]",
+					"strict" : false
+				},
+				{
+					"name" : "InstructionOut[5]",
+					"strict" : false
+				},
+				{
+					"name" : "InstructionOut[6]",
+					"strict" : false
+				},
+				{
+					"name" : "InstructionOut[7]",
+					"strict" : false
+				},
+				{
+					"name" : "InstructionOut[8]",
+					"strict" : false
+				},
+				{
+					"name" : "InstructionOut[9]",
+					"strict" : false
+				},
+				{
+					"name" : "InstructionOut[10]",
+					"strict" : false
+				},
+				{
+					"name" : "InstructionOut[11]",
+					"strict" : false
+				},
+				{
+					"name" : "InstructionOut[12]",
+					"strict" : false
+				},
+				{
+					"name" : "InstructionOut[13]",
+					"strict" : false
+				},
+				{
+					"name" : "InstructionOut[14]",
+					"strict" : false
+				},
+				{
+					"name" : "InstructionOut[15]",
+					"strict" : false
+				},
+				{
+					"name" : "InstructionOut[16]",
+					"strict" : false
+				},
+				{
+					"name" : "InstructionOut[17]",
+					"strict" : false
+				},
+				{
+					"name" : "InstructionOut[18]",
+					"strict" : false
+				},
+				{
+					"name" : "InstructionOut[19]",
+					"strict" : false
+				},
+				{
+					"name" : "InstructionOut[20]",
+					"strict" : false
+				},
+				{
+					"name" : "InstructionOut[21]",
+					"strict" : false
+				},
+				{
+					"name" : "InstructionOut[22]",
+					"strict" : false
+				},
+				{
+					"name" : "InstructionOut[23]",
+					"strict" : false
+				},
+				{
+					"name" : "InstructionOut[24]",
+					"strict" : false
+				},
+				{
+					"name" : "InstructionOut[25]",
+					"strict" : false
+				},
+				{
+					"name" : "InstructionOut[26]",
+					"strict" : false
+				},
+				{
+					"name" : "InstructionOut[27]",
+					"strict" : false
+				},
+				{
+					"name" : "InstructionOut[28]",
+					"strict" : false
+				},
+				{
+					"name" : "InstructionOut[29]",
+					"strict" : false
+				},
+				{
+					"name" : "InstructionOut[30]",
+					"strict" : false
+				},
+				{
+					"name" : "InstructionOut[31]",
+					"strict" : false
+				},
+				{
+					"name" : "BranchOut",
+					"strict" : false
+				},
+				{
+					"name" : "ZeroOut",
+					"strict" : false
+				},
+				{
+					"name" : "MemWriteOut",
+					"strict" : false
+				},
+				{
+					"name" : "RegWriteOut",
+					"strict" : false
+				},
+				{
+					"name" : "ValueSelect[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ValueSelect[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ValueSelect[1]",
+					"strict" : false
+				},
+				{
+					"name" : "InstrSelect[0]",
+					"strict" : false
+				},
+				{
+					"name" : "InstrSelect[2]",
+					"strict" : false
+				},
+				{
+					"name" : "InstrSelect[1]",
+					"strict" : false
+				},
+				{
+					"name" : "gclock",
+					"strict" : false
+				},
+				{
+					"name" : "greset",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

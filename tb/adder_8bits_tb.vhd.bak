@@ -1,0 +1,37 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY adder_8bits_tb IS
+END adder_8bits_tb;
+
+architecture testbench of adder_8bits_tb is
+signal i_Ai_tb, i_Bi_tb:std_logic_vector(7 downto 0);
+signal o_CarryOut_tb:STD_LOGIC;
+signal o_Sum_tb	:std_logic_vector(7 downto 0);
+
+	component adder_8bits IS
+	PORT(i_Ai, i_Bi		: in std_logic_vector(7 downto 0);
+		  o_CarryOut		: OUT	STD_LOGIC;
+		  o_Sum			: OUT	std_logic_vector(7 downto 0));
+	END component;
+begin
+	dut:adder_8bits
+		port map(i_Ai=>i_Ai_tb, 
+					i_Bi=>i_Bi_tb,
+					o_CarryOut=>o_CarryOut_tb,
+					o_Sum=>o_Sum_tb);
+					
+	stim:process
+	begin
+		i_Ai_tb<="00001100";i_Bi_tb<="00001100";
+		wait for 2ns;
+		i_Ai_tb<="11100000";i_Bi_tb<="11010000";
+		wait for 2ns;
+		i_Ai_tb<="01101100";i_Bi_tb<="00000000";
+		wait for 2ns;
+		i_Ai_tb<="00000000";i_Bi_tb<="11111111";
+		wait for 2ns;
+		wait;
+	end process;
+
+end testbench;

@@ -1,0 +1,54 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity ALUcontrolblock_tb is
+end ALUcontrolblock_tb;
+
+architecture testbench of ALUcontrolblock_tb is
+signal ALUop_tb:std_logic_vector(1 downto 0);
+signal func_tb: std_logic_vector(5 downto 0);
+signal operation_tb:std_logic_vector(2 downto 0);
+
+	component ALUcontrolblock is
+	port(ALUop:in std_logic_vector(1 downto 0);
+		  func: in std_logic_vector(5 downto 0);
+		  operation:out std_logic_vector(2 downto 0));
+	end component;
+
+begin
+	dut:ALUcontrolblock
+		port map(ALUop=>ALUop_tb,
+					func=>func_tb,
+					operation=>operation_tb);
+					
+	stim:process
+	begin
+		ALUop_tb<="00";
+--		func_tb<="------";
+		func_tb<="000000";
+		wait for 2ns;
+		ALUop_tb<="01";
+		func_tb<="111000";
+		wait for 2ns;
+		ALUop_tb<="10";
+		func_tb<="110000";
+		wait for 2ns;
+--		ALUop_tb<="1-";
+		func_tb<="100010";
+		wait for 2ns;
+--		ALUop_tb<="1-";
+		func_tb<="100100";
+		wait for 2ns;
+--		ALUop_tb<="1-";
+		func_tb<="010101";
+		wait for 2ns;
+--		ALUop_tb<="1-";
+		func_tb<="011010";
+		wait for 2ns;
+		func_tb<="111010";
+		wait for 2ns;
+		wait;
+		
+	end process;
+	
+end testbench;

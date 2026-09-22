@@ -1,0 +1,60 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity IF_ID_tb is
+end IF_ID_tb;
+
+architecture testbench of IF_ID_tb is
+signal greset_tb,gclock_tb: std_logic;
+signal if_id_load_tb,if_flush_tb: std_logic;
+signal pc_offset_4_in_tb,instruction_in_tb: std_logic_vector(31 downto 0);
+signal pc_offset_4_out_tb,instruction_out_tb: std_logic_vector(31 downto 0);
+	
+	component IF_ID is
+	port(greset,gclock:in std_logic;
+		  if_id_load,if_flush:in std_logic;
+		  pc_offset_4_in,instruction_in:in std_logic_vector(31 downto 0);
+		  pc_offset_4_out,instruction_out:out std_logic_vector(31 downto 0));
+	end component;
+
+begin
+	dut:IF_ID
+		port map(greset=>greset_tb,
+					gclock=>gclock_tb,
+					if_id_load=>if_id_load_tb,
+					if_flush=>if_flush_tb,
+					pc_offset_4_in=>pc_offset_4_in_tb,
+					instruction_in=>instruction_in_tb,
+					pc_offset_4_out=>pc_offset_4_out_tb,
+					instruction_out=>instruction_out_tb);
+					
+	clk_process:process
+	begin
+		gclock_tb<='1';
+		wait for 1ns;
+		gclock_tb<='0';
+		wait for 1ns;
+	end process;
+	
+	stim:process
+	begin
+		greset_tb<='0','1' after 2ns;
+		if_flush_tb<='0';if_id_load_tb<='1';
+		pc_offset_4_in_tb<=x"FFFF0000";
+		instruction_in_tb<=x"BBBBBBBB";
+		wait for 20ns;
+		pc_offset_4_in_tb<=x"CCCCCCCC";
+		instruction_in_tb<=x"AAAA0A0A";
+		wait for 20ns;
+		if_id_load_tb<='0';
+		pc_offset_4_in_tb<=x"EFEFEFEF";
+		instruction_in_tb<=x"11111121";
+		wait for 6ns;
+		if_id_load_tb<='1';
+		WAIT FOR 10NS;
+		if_flush_tb<='1';
+		WAIT FOR 2NS;
+		wait;
+	end process;
+					
+end testbench;

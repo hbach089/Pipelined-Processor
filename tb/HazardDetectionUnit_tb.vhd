@@ -1,0 +1,57 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use IEEE.NUMERIC_STD.ALL;
+
+entity HazardDetectionUnit_tb is
+end HazardDetectionUnit_tb;
+
+architecture testbench of HazardDetectionUnit_tb is  
+signal greset_tb,gclock_tb:std_logic;
+signal opCode_tb:std_logic_vector(5 downto 0);
+signal idex_memread_tb,ifid_beq_and_eq_tb:std_logic;
+signal ifid_rs_tb,ifid_rt_tb,idex_rt_tb:std_logic_vector(4 downto 0);
+signal PCLoad_tb,IFIDLoad_tb,IFID_Flush_tb,ControlSignals_Mux_tb:std_logic;
+
+	component HazardDetectionUnit is
+	port(greset,gclock:in std_logic;
+		  opCode:in std_logic_vector(5 downto 0);
+		  idex_memread,ifid_beq_and_eq:in std_logic;
+		  ifid_rs,ifid_rt,idex_rt:in std_logic_vector(4 downto 0);
+		  PCLoad,IFIDLoad,IFID_Flush,ControlSignals_Mux:out std_logic);
+	end component;
+
+begin
+	dut:HazardDetectionUnit
+		port map(greset=>greset_tb,
+					gclock=>gclock_tb,
+					opCode=>opCode_tb,
+					idex_memread=>idex_memread_tb,
+					ifid_beq_and_eq=>ifid_beq_and_eq_tb,
+					ifid_rs=>ifid_rs_tb,
+					ifid_rt=>ifid_rt_tb,
+					idex_rt=>idex_rt_tb,
+					PCLoad=>PCLoad_tb,
+					IFIDLoad=>IFIDLoad_tb,
+					IFID_Flush=>IFID_Flush_tb,
+					ControlSignals_Mux=>ControlSignals_Mux_tb);
+					
+	clk_process:process
+	begin
+		gclock_tb<='1';
+		wait for 1ns;
+		gclock_tb<='0';
+		wait for 1ns;
+	end process;
+	
+	stim:process
+	begin
+		greset_tb<='0','1' after 2ns;
+		idex_memread_tb<='1';
+		ifid_beq_and_eq_tb<='1';
+		ifid_rs_tb<="00110";
+		ifid_rt_tb<="00101";
+		idex_rt_tb<="00010";
+		wait for 2ns;
+		wait;
+	end process;
+end testbench;

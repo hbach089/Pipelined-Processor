@@ -1,0 +1,259 @@
+Flow report for SingleCycleProcessor
+Tue Sep 01 10:04:05 2026
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++------------------------------------+---------------------------------------------+
+; Flow Status                        ; Successful - Tue Sep 01 10:04:05 2026       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; SingleCycleProcessor                        ;
+; Top-level Entity Name              ; processor                                   ;
+; Family                             ; Cyclone IV E                                ;
+; Device                             ; EP4CE115F29C7                               ;
+; Timing Models                      ; Final                                       ;
+; Total logic elements               ; 1,823 / 114,480 ( 2 % )                     ;
+;     Total combinational functions  ; 1,722 / 114,480 ( 2 % )                     ;
+;     Dedicated logic registers      ; 829 / 114,480 ( < 1 % )                     ;
+; Total registers                    ; 829                                         ;
+; Total pins                         ; 76 / 529 ( 14 % )                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 8,192 / 3,981,312 ( < 1 % )                 ;
+; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Flow Settings                            ;
++-------------------+----------------------+
+; Option            ; Setting              ;
++-------------------+----------------------+
+; Start date & time ; 09/01/2026 10:02:14  ;
+; Main task         ; Compilation          ;
+; Revision Name     ; SingleCycleProcessor ;
++-------------------+----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                       ;
++--------------------------------------+----------------------------------------+----------------------+-------------+-----------------------------------+
+; Assignment Name                      ; Value                                  ; Default Value        ; Entity Name ; Section Id                        ;
++--------------------------------------+----------------------------------------+----------------------+-------------+-----------------------------------+
+; COMPILER_SIGNATURE_ID                ; 145862335789279.178827133402280        ; --                   ; --          ; --                                ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                   ; --          ; ALU_tb                            ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                   ; --          ; mux_32x1_8bits_tb                 ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                   ; --          ; test_tb                           ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                   ; --          ; mux_5x1_tb                        ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                   ; --          ; RegisterFile_tb                   ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                   ; --          ; adder_8bits_tb                    ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                   ; --          ; RAM_async_tb                      ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                   ; --          ; ForwardingUnit_tb                 ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                   ; --          ; ControlLogicUnit_tb               ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                   ; --          ; IM_ROM_tb                         ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                   ; --          ; IF_ID_tb                          ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                   ; --          ; LoadUseHazard_Fix_tb              ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                   ; --          ; ALUcontrolblock_tb                ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                   ; --          ; twobitcounter_tb                  ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                   ; --          ; async_Register_32bits_tb          ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                   ; --          ; Substractor_8bits_tb              ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                   ; --          ; HazardDetectionUnit_tb            ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                   ; --          ; demux_1x32_8bits_tb               ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                   ; --          ; DM_RAM_tb                         ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                   ; --          ; ShiftLeft_by2_tb                  ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                   ; --          ; ShiftLeft_by2_28bits_tb           ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                   ; --          ; mux_2x1_8bits_tb                  ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                   ; --          ; Rf_Register_8bits_tb              ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                   ; --          ; d_Latch_tb                        ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                   ; --          ; mux_8x1_32bits_tb                 ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                   ; --          ; signExtend_tb                     ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                   ; --          ; reg_RAM_tb                        ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                   ; --          ; processor_tb                      ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                   ; --          ; EX_MEM_tb                         ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                   ; --          ; PC_tb                             ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --                   ; --          ; eda_board_design_timing           ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --                   ; --          ; eda_board_design_boundary_scan    ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --                   ; --          ; eda_board_design_signal_integrity ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --                   ; --          ; eda_board_design_symbol           ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; processor_tb                           ; --                   ; --          ; eda_simulation                    ;
+; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                   ; --                   ; --          ; eda_simulation                    ;
+; EDA_SIMULATION_TOOL                  ; ModelSim (VHDL)                        ; <None>               ; --          ; --                                ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --                   ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_FILE                  ; ALU_tb.vhd                             ; --                   ; --          ; ALU_tb                            ;
+; EDA_TEST_BENCH_FILE                  ; mux_32x1_8bits_tb.vhd                  ; --                   ; --          ; mux_32x1_8bits_tb                 ;
+; EDA_TEST_BENCH_FILE                  ; test_tb.vhd                            ; --                   ; --          ; test_tb                           ;
+; EDA_TEST_BENCH_FILE                  ; mux_5x1_tb.vhd                         ; --                   ; --          ; mux_5x1_tb                        ;
+; EDA_TEST_BENCH_FILE                  ; RegisterFile_tb.vhd                    ; --                   ; --          ; RegisterFile_tb                   ;
+; EDA_TEST_BENCH_FILE                  ; adder_8bits_tb.vhd                     ; --                   ; --          ; adder_8bits_tb                    ;
+; EDA_TEST_BENCH_FILE                  ; RAM_async_tb.vhd                       ; --                   ; --          ; RAM_async_tb                      ;
+; EDA_TEST_BENCH_FILE                  ; ForwardingUnit_tb.vhd                  ; --                   ; --          ; ForwardingUnit_tb                 ;
+; EDA_TEST_BENCH_FILE                  ; ControlLogicUnit_tb.vhd                ; --                   ; --          ; ControlLogicUnit_tb               ;
+; EDA_TEST_BENCH_FILE                  ; IM_ROM_tb.vhd                          ; --                   ; --          ; IM_ROM_tb                         ;
+; EDA_TEST_BENCH_FILE                  ; IF_ID_tb.vhd                           ; --                   ; --          ; IF_ID_tb                          ;
+; EDA_TEST_BENCH_FILE                  ; LoadUseHazard_Fix_tb.vhd               ; --                   ; --          ; LoadUseHazard_Fix_tb              ;
+; EDA_TEST_BENCH_FILE                  ; ALUcontrolblock_tb.vhd                 ; --                   ; --          ; ALUcontrolblock_tb                ;
+; EDA_TEST_BENCH_FILE                  ; twobitcounter_tb.vhd                   ; --                   ; --          ; twobitcounter_tb                  ;
+; EDA_TEST_BENCH_FILE                  ; async_Register_32bits_tb.vhd           ; --                   ; --          ; async_Register_32bits_tb          ;
+; EDA_TEST_BENCH_FILE                  ; Substractor_8bits_tb.vhd               ; --                   ; --          ; Substractor_8bits_tb              ;
+; EDA_TEST_BENCH_FILE                  ; HazardDetectionUnit_tb.vhd             ; --                   ; --          ; HazardDetectionUnit_tb            ;
+; EDA_TEST_BENCH_FILE                  ; demux_1x32_8bits_tb.vhd                ; --                   ; --          ; demux_1x32_8bits_tb               ;
+; EDA_TEST_BENCH_FILE                  ; DM_RAM_tb.vhd                          ; --                   ; --          ; DM_RAM_tb                         ;
+; EDA_TEST_BENCH_FILE                  ; ShiftLeft_by2_tb.vhd                   ; --                   ; --          ; ShiftLeft_by2_tb                  ;
+; EDA_TEST_BENCH_FILE                  ; ShiftLeft_by2_28bits_tb.vhd            ; --                   ; --          ; ShiftLeft_by2_28bits_tb           ;
+; EDA_TEST_BENCH_FILE                  ; mux_2x1_8bits_tb.vhd                   ; --                   ; --          ; mux_2x1_8bits_tb                  ;
+; EDA_TEST_BENCH_FILE                  ; Rf_Register_8bits_tb.vhd               ; --                   ; --          ; Rf_Register_8bits_tb              ;
+; EDA_TEST_BENCH_FILE                  ; d_Latch_tb.vhd                         ; --                   ; --          ; d_Latch_tb                        ;
+; EDA_TEST_BENCH_FILE                  ; mux_8x1_32bits_tb.vhd                  ; --                   ; --          ; mux_8x1_32bits_tb                 ;
+; EDA_TEST_BENCH_FILE                  ; signExtend_tb.vhd                      ; --                   ; --          ; signExtend_tb                     ;
+; EDA_TEST_BENCH_FILE                  ; reg_RAM_tb.vhd                         ; --                   ; --          ; reg_RAM_tb                        ;
+; EDA_TEST_BENCH_FILE                  ; processor_tb.vhd                       ; --                   ; --          ; processor_tb                      ;
+; EDA_TEST_BENCH_FILE                  ; EX_MEM_tb.vhd                          ; --                   ; --          ; EX_MEM_tb                         ;
+; EDA_TEST_BENCH_FILE                  ; PC_TB.vhd                              ; --                   ; --          ; PC_tb                             ;
+; EDA_TEST_BENCH_MODULE_NAME           ; ALU_tb                                 ; --                   ; --          ; ALU_tb                            ;
+; EDA_TEST_BENCH_MODULE_NAME           ; mux_32x1_8bits_tb                      ; --                   ; --          ; mux_32x1_8bits_tb                 ;
+; EDA_TEST_BENCH_MODULE_NAME           ; test_tb                                ; --                   ; --          ; test_tb                           ;
+; EDA_TEST_BENCH_MODULE_NAME           ; mux_5x1_tb                             ; --                   ; --          ; mux_5x1_tb                        ;
+; EDA_TEST_BENCH_MODULE_NAME           ; RegisterFile_tb                        ; --                   ; --          ; RegisterFile_tb                   ;
+; EDA_TEST_BENCH_MODULE_NAME           ; adder_8bits_tb                         ; --                   ; --          ; adder_8bits_tb                    ;
+; EDA_TEST_BENCH_MODULE_NAME           ; RAM_async_tb                           ; --                   ; --          ; RAM_async_tb                      ;
+; EDA_TEST_BENCH_MODULE_NAME           ; ForwardingUnit_tb                      ; --                   ; --          ; ForwardingUnit_tb                 ;
+; EDA_TEST_BENCH_MODULE_NAME           ; ControlLogicUnit_tb                    ; --                   ; --          ; ControlLogicUnit_tb               ;
+; EDA_TEST_BENCH_MODULE_NAME           ; IM_ROM_tb                              ; --                   ; --          ; IM_ROM_tb                         ;
+; EDA_TEST_BENCH_MODULE_NAME           ; IF_ID_tb                               ; --                   ; --          ; IF_ID_tb                          ;
+; EDA_TEST_BENCH_MODULE_NAME           ; LoadUseHazard_Fix_tb                   ; --                   ; --          ; LoadUseHazard_Fix_tb              ;
+; EDA_TEST_BENCH_MODULE_NAME           ; ALUcontrolblock_tb                     ; --                   ; --          ; ALUcontrolblock_tb                ;
+; EDA_TEST_BENCH_MODULE_NAME           ; twobitcounter_tb                       ; --                   ; --          ; twobitcounter_tb                  ;
+; EDA_TEST_BENCH_MODULE_NAME           ; async_Register_32bits_tb               ; --                   ; --          ; async_Register_32bits_tb          ;
+; EDA_TEST_BENCH_MODULE_NAME           ; Substractor_8bits_tb                   ; --                   ; --          ; Substractor_8bits_tb              ;
+; EDA_TEST_BENCH_MODULE_NAME           ; HazardDetectionUnit_tb                 ; --                   ; --          ; HazardDetectionUnit_tb            ;
+; EDA_TEST_BENCH_MODULE_NAME           ; demux_1x32_8bits_tb                    ; --                   ; --          ; demux_1x32_8bits_tb               ;
+; EDA_TEST_BENCH_MODULE_NAME           ; DM_RAM_tb                              ; --                   ; --          ; DM_RAM_tb                         ;
+; EDA_TEST_BENCH_MODULE_NAME           ; ShiftLeft_by2_tb                       ; --                   ; --          ; ShiftLeft_by2_tb                  ;
+; EDA_TEST_BENCH_MODULE_NAME           ; ShiftLeft_by2_28bits_tb                ; --                   ; --          ; ShiftLeft_by2_28bits_tb           ;
+; EDA_TEST_BENCH_MODULE_NAME           ; mux_2x1_8bits_tb                       ; --                   ; --          ; mux_2x1_8bits_tb                  ;
+; EDA_TEST_BENCH_MODULE_NAME           ; Rf_Register_8bits_tb                   ; --                   ; --          ; Rf_Register_8bits_tb              ;
+; EDA_TEST_BENCH_MODULE_NAME           ; d_Latch_tb                             ; --                   ; --          ; d_Latch_tb                        ;
+; EDA_TEST_BENCH_MODULE_NAME           ; mux_8x1_32bits_tb                      ; --                   ; --          ; mux_8x1_32bits_tb                 ;
+; EDA_TEST_BENCH_MODULE_NAME           ; signExtend_tb                          ; --                   ; --          ; signExtend_tb                     ;
+; EDA_TEST_BENCH_MODULE_NAME           ; reg_RAM_tb                             ; --                   ; --          ; reg_RAM_tb                        ;
+; EDA_TEST_BENCH_MODULE_NAME           ; processor_tb                           ; --                   ; --          ; processor_tb                      ;
+; EDA_TEST_BENCH_MODULE_NAME           ; EX_MEM_tb                              ; --                   ; --          ; EX_MEM_tb                         ;
+; EDA_TEST_BENCH_MODULE_NAME           ; PC_tb                                  ; --                   ; --          ; PC_tb                             ;
+; EDA_TEST_BENCH_NAME                  ; IM_ROM_tb                              ; --                   ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; PC_tb                                  ; --                   ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; adder_8bits_tb                         ; --                   ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; processor_tb                           ; --                   ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; Rf_Register_8bits_tb                   ; --                   ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; RegisterFile_tb                        ; --                   ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; Substractor_8bits_tb                   ; --                   ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; mux_5x1_tb                             ; --                   ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; ALUcontrolblock_tb                     ; --                   ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; ALU_tb                                 ; --                   ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; mux_2x1_8bits_tb                       ; --                   ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; DM_RAM_tb                              ; --                   ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; ShiftLeft_by2_tb                       ; --                   ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; ControlLogicUnit_tb                    ; --                   ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; mux_32x1_8bits_tb                      ; --                   ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; test_tb                                ; --                   ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; reg_RAM_tb                             ; --                   ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; signExtend_tb                          ; --                   ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; demux_1x32_8bits_tb                    ; --                   ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; d_Latch_tb                             ; --                   ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; async_Register_32bits_tb               ; --                   ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; RAM_async_tb                           ; --                   ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; twobitcounter_tb                       ; --                   ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; ShiftLeft_by2_28bits_tb                ; --                   ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; IF_ID_tb                               ; --                   ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; EX_MEM_tb                              ; --                   ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; ForwardingUnit_tb                      ; --                   ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; HazardDetectionUnit_tb                 ; --                   ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; LoadUseHazard_Fix_tb                   ; --                   ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; mux_8x1_32bits_tb                      ; --                   ; --          ; eda_simulation                    ;
+; EDA_TIME_SCALE                       ; 1 ps                                   ; --                   ; --          ; eda_simulation                    ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --                   ; --          ; --                                ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --                   ; --          ; --                                ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                   ; --                   ; --          ; --                                ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --                   ; processor   ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --                   ; processor   ; Top                               ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --                   ; processor   ; Top                               ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --                   ; --          ; --                                ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --                   ; --          ; --                                ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --                   ; --          ; --                                ;
+; TOP_LEVEL_ENTITY                     ; processor                              ; SingleCycleProcessor ; --          ; --                                ;
++--------------------------------------+----------------------------------------+----------------------+-------------+-----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:28     ; 1.0                     ; 4897 MB             ; 00:00:54                           ;
+; Fitter               ; 00:01:05     ; 1.1                     ; 6747 MB             ; 00:03:21                           ;
+; Assembler            ; 00:00:06     ; 1.0                     ; 4699 MB             ; 00:00:06                           ;
+; Timing Analyzer      ; 00:00:05     ; 1.4                     ; 5017 MB             ; 00:00:05                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4661 MB             ; 00:00:02                           ;
+; Total                ; 00:01:45     ; --                      ; --                  ; 00:04:28                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; LAPTOP-DH9SSH85  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; LAPTOP-DH9SSH85  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; LAPTOP-DH9SSH85  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; LAPTOP-DH9SSH85  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-DH9SSH85  ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off SingleCycleProcessor -c SingleCycleProcessor
+quartus_fit --read_settings_files=off --write_settings_files=off SingleCycleProcessor -c SingleCycleProcessor
+quartus_asm --read_settings_files=off --write_settings_files=off SingleCycleProcessor -c SingleCycleProcessor
+quartus_sta SingleCycleProcessor -c SingleCycleProcessor
+quartus_eda --read_settings_files=off --write_settings_files=off SingleCycleProcessor -c SingleCycleProcessor
+
+
+

@@ -1,0 +1,44 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity ALU_tb is
+end ALU_Tb;
+
+architecture testbench of ALU_tb is
+signal ipt1_tb,ipt2_tb:std_logic_vector(7 downto 0);
+signal operation_tb: std_logic_vector(2 downto 0);
+signal alu_result_tb: std_logic_vector(7 downto 0);
+signal zero_tb:std_logic;
+
+component ALU is
+port(ipt1,ipt2:in std_logic_vector(7 downto 0);
+	  operation:in std_logic_vector(2 downto 0);
+	  alu_result:out std_logic_vector(7 downto 0);
+	  zero:out std_logic);
+end component;
+
+begin
+	dut:ALU
+		port map(ipt1=>ipt1_tb,
+					ipt2=>ipt2_tb,
+					operation=>operation_tb,
+					alu_result=>alu_result_tb,
+					zero=>zero_tb);
+					
+	stim:process
+	begin
+		ipt1_tb<="00000001";
+		ipt2_tb<="00000010";
+		operation_tb<="000";
+		wait for 2ns;
+		operation_tb<="001";
+		wait for 2ns;
+		operation_tb<="010";
+		wait for 2ns;
+		operation_tb<="110";
+		wait for 2ns;
+		operation_tb<="111";
+		wait for 2ns;
+		wait;
+	end process;
+end testbench;

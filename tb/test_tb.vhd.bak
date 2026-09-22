@@ -1,0 +1,40 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity test_tb is
+end test_Tb;
+
+
+architecture testbench of test_tb is
+signal greset_tb,gclock_tb:in std_logic;
+signal alu_result_tb,ram_Result_tb:out std_logic_vector(7 downto 0);
+
+	component test is
+	port(greset,gclock:in std_logic;
+		  alu_result,ram_Result:out std_logic_vector(7 downto 0));
+	end test;
+	
+begin
+	
+	dut:test
+		port map(greset=>greset_Tb,
+					gclock=>gclock_tb,
+					alu_result=>alu_result_tb,
+					ram_result=>ram_result_tb);
+					
+		clock_process:process
+	begin
+		gclock_tb<='1';
+		wait for 1ns;
+		gclock_tb<='0';
+		wait for 1ns;
+	end process;
+	
+	stim:process
+	begin
+		greset_tb<='0','1' after 2ns;
+		wait for 2ns;
+		wait;
+	end process;
+	
+end testbench;

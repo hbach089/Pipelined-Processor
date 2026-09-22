@@ -1,0 +1,59 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity mux_8x1_32bits_tb is
+end mux_8x1_32bits_tb;
+
+architecture testbench of mux_8x1_32bits_tb is
+signal a_tb,b_tb,c_tb,d_tb,e_Tb,f_tb,g_tb,h_tb:std_logic_vector(31 downto 0);
+signal sel_tb:std_logic_vector(2 downto 0);
+signal opt_tb:std_logic_vector(31 downto 0);
+
+component mux_8x1_32bits is
+port(a,b,c,d,e,f,g,h:in std_logic_vector(31 downto 0);
+	  sel:in std_logic_vector(2 downto 0);
+	  opt:out std_logic_vector(31 downto 0));
+end component;
+
+begin
+	dut:mux_8x1_32bits
+		port map(a=>a_tb,
+					b=>b_tb,
+					c=>c_tb,
+					d=>d_tb,
+					e=>e_tb,
+					f=>f_tb,
+					g=>g_tb,
+					h=>h_tb,
+					sel=>sel_tb,
+					opt=>opt_Tb);
+
+	stim:process
+	begin
+		a_tb<=x"00000000";
+		b_tb<=x"AAAAAAAA";
+		c_tb<=x"BBBBBBBB";
+		d_tb<=x"CCCCCCCC";
+		e_Tb<=x"DDDDDDDD";
+		f_tb<=x"EEEEEEEE";
+		g_tb<=x"FFFFFFFF";
+		h_Tb<=x"11110000";
+		sel_tb<="000";
+		wait for 2ns;
+		sel_tb<="001";
+		wait for 2ns;
+		sel_tb<="010";
+		wait for 2ns;
+		sel_tb<="011";
+		wait for 2ns;
+		sel_tb<="100";
+		wait for 2ns;
+		sel_tb<="101";
+		wait for 2ns;
+		sel_tb<="110";
+		wait for 2ns;
+		sel_tb<="111";
+		wait for 2ns;
+		wait;
+	end process;
+end testbench;

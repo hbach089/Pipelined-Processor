@@ -1,0 +1,36 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity demux_1x32_8bits_tb is
+end demux_1x32_8bits_tb;
+
+architecture testbench of demux_1x32_8bits_tb is
+signal ipt_tb:std_logic_vector(7 downto 0);
+signal opt0_tb,opt1_tb,opt2_tb,opt3_tb:std_logic_vector(7 downto 0);
+
+	component demux_1x32_8bits is
+	port(ipt:in std_logic_vector(7 downto 0);
+		  opt0,opt1,opt2,opt3:out std_logic_vector(7 downto 0));
+	end component;
+
+begin
+	dut:demux_1x32_8bits
+		port map(ipt=>ipt_tb,
+					opt0=>opt0_tb,
+					opt1=>opt1_tb,
+					opt2=>opt2_Tb,
+					opt3=>opt3_tb);
+					
+	stim:process
+	begin
+		ipt_tb<="00000";
+		wait for 2ns;
+		ipt_tb<="00001";
+		wait for 2ns;
+		ipt_tb<="00010";
+		wait for 2ns;
+		ipt_tb<="00011";
+		wait for 2ns;
+	end process;
+	
+end testbench;

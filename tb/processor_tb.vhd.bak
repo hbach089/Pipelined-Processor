@@ -1,0 +1,39 @@
+LIBRARY IEEE;
+use IEEE.std_logic_1164.all;
+
+entity processor_tb is
+end processor_tb;
+
+
+architecture testbench of processor_tb is
+signal greset_tb,gclock_tb:std_logic;
+signal instruction_tb: std_logic_vector(31 downto 0);
+
+	component processor is
+	port(greset,gclock:in std_logic;
+		  instruction:out std_logic_vector(31 downto 0));
+	end component;
+
+BEGIN
+
+	pc_ref:PC
+		port map(greset=>greset_tb,
+					gclock=>gclock_tb,
+					instruction=>instruction_tb);
+					
+	clock_process:process
+	begin
+		gclock_tb<='1';
+		wait for 1ns;
+		gclock_tb<='0';
+		wait for 1ns;
+	end process;
+	
+	stim:process
+	begin
+		greset_tb<='0','1' after 2ns;
+		wait for 2ns;
+		wait;
+	end process
+	
+end rtl;

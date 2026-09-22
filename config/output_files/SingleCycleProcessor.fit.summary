@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue Sep 01 10:03:48 2026
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : SingleCycleProcessor
+Top-level Entity Name : processor
+Family : Cyclone IV E
+Device : EP4CE115F29C7
+Timing Models : Final
+Total logic elements : 1,823 / 114,480 ( 2 % )
+    Total combinational functions : 1,722 / 114,480 ( 2 % )
+    Dedicated logic registers : 829 / 114,480 ( < 1 % )
+Total registers : 829
+Total pins : 76 / 529 ( 14 % )
+Total virtual pins : 0
+Total memory bits : 8,192 / 3,981,312 ( < 1 % )
+Embedded Multiplier 9-bit elements : 0 / 532 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
